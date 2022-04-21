@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         //head bobbing while moving
         if (x != 0 || z != 0) {
             HeadBobbing(movingCounter, 0.25f, 0.25f);
-            movingCounter += Time.deltaTime * 4;
+            movingCounter += Time.deltaTime * 4.5f;
         }
         //slowly ease back to original cam position when idle
         else
@@ -66,6 +66,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void HeadBobbing(float p_z, float p_x_intensity, float p_y_intensity)
     {
-        playerCam.localPosition = camOrigin + new Vector3(Mathf.Cos(p_z) * p_x_intensity, Mathf.Sin(p_z * 2) * p_y_intensity, 0);
+        playerCam.localPosition = Vector3.MoveTowards(
+            playerCam.localPosition, 
+            camOrigin + new Vector3(Mathf.Cos(p_z) * p_x_intensity, Mathf.Sin(p_z * 2) * p_y_intensity, 0), 
+            Time.deltaTime);
+        //playerCam.localPosition = camOrigin + new Vector3(Mathf.Cos(p_z) * p_x_intensity, Mathf.Sin(p_z * 2) * p_y_intensity, 0);
     }
 }
