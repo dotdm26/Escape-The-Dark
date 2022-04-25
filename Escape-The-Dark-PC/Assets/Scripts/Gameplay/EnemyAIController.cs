@@ -24,8 +24,7 @@ public class EnemyAIController : MonoBehaviour
 
     private void Update()
     {
-        //TO DO: how to rotate the checkcapsule?
-        playerDetected = Physics.CheckCapsule(transform.position, transform.forward, enemySightRange, whatIsPlayer);
+        playerDetected = Physics.CheckSphere(transform.position, enemySightRange, whatIsPlayer);
         if (!playerDetected) return;
         else ChasePlayer();
     }
