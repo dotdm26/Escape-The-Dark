@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class CameraRayControl : MonoBehaviour
 {
-
     void FixedUpdate()
     {
-        //For the flashlight to trigger certain enemies
-        //ask the teacher if it's possible to use SphereCast (which doesn't work on triggers)
         RaycastHit hit;
         bool hasHit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit);
         if (hasHit)
         {
             if (hit.collider.CompareTag("Enemy"))
             {
-                Debug.Log("Look at enemy");
+                if (hit.collider.name == "FlashlightEnemy")
+                {
+                    hit.transform.SendMessage("HitByLight");
+                }
+                if (hit.collider.name == "DarknessEnemy")
+                {
+                    hit.transform.SendMessage("HitByLight");
+                }
             }
+        }
+        else
+        {
+            GameObject.Find("FlashlightEnemy").SendMessage("NotHitByLight");
+            GameObject.Find("DarknessEnemy").SendMessage("NotHitByLight");
         }
     }
 }

@@ -10,28 +10,43 @@ public class DarkEnemyAIController : MonoBehaviour
     public LayerMask whatIsPlayer;
 
     public float enemySightRange;
-    public bool playerDetected;
+    public bool isChasing;
 
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        isChasing = true;
     }
 
+    //dark enemy is considerably slower, but moves all the time.
+    //stops moving temporarily if you shine a light on it
     private void Update()
     {
-        //Note: make sure the GameObject is rotated by 90 deg on the Z axis.
-        //We want to use the length of the capsule by rotating it to place it on its horizontal side.
-        //works better for mazes with small corridors
-        playerDetected = Physics.CheckCapsule(transform.position, transform.forward, enemySightRange, whatIsPlayer);
-
-        if (!playerDetected) return;
+        if (isChasing == false)
+        {
+            gameObject.GetComponent<Collider>().isTrigger = false;
+        }
         else ChasePlayer();
     }
 
-    private void ChasePlayer()
+    void ChasePlayer()
     {
+        gameObject.GetComponent<Collider>().isTrigger = true;
         agent.SetDestination(player.position);
         transform.LookAt(player);
+    }
+    
+    void HitByLight()
+    {
+        Debug.Log("Dark enemy hit by light");
+        agent.isStopped = true;
+        isChasing = false;
+    }
+
+    void NotHitByLight()
+    {
+        agent.isStopped = false;
+        isChasing = true;
     }
 }
