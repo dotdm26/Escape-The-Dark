@@ -61,13 +61,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isRunning == true)
         {
-            Debug.Log("bobbing run");
             p_x_intensity = 1f;
             p_y_intensity = 1f;
         }
         else
         {
-            Debug.Log("bobbing walk");
             p_x_intensity = 0.25f;
             p_y_intensity = 0.25f;
         }

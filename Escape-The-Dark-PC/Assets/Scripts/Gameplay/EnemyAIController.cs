@@ -16,12 +16,16 @@ public class EnemyAIController : MonoBehaviour
     public float enemySightRange;
     public bool playerDetected;
 
+    private Collider EnemyCollider;
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        player = GameObject.Find("Player").transform;
+        EnemyCollider = gameObject.GetComponent<Collider>();
+        EnemyCollider.isTrigger = true;
     }
 
+    //Normal enemy, moves when player is close. Unstoppable but slow
     private void Update()
     {
         playerDetected = Physics.CheckSphere(transform.position, enemySightRange, whatIsPlayer);

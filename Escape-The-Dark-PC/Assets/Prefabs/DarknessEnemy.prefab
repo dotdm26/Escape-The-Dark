@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8799041645908700268}
   - component: {fileID: 8799041645908700266}
   - component: {fileID: 8799041645908700264}
-  - component: {fileID: 8799041645908700265}
   m_Layer: 0
   m_Name: DarknessEnemy
   m_TagString: Enemy
@@ -108,7 +107,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -139,15 +138,3 @@ MonoBehaviour:
     m_Bits: 0
   enemySightRange: 0
   isChasing: 0
---- !u!114 &8799041645908700265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8799041645908700275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8579982ee6b5daa46ba33406d3c932e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

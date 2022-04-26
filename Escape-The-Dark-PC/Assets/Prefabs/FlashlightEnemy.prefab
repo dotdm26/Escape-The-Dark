@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5891965425038719572}
   - component: {fileID: 5891965425038719658}
   - component: {fileID: 5891965425038719656}
-  - component: {fileID: 5891965425038719657}
   m_Layer: 0
   m_Name: FlashlightEnemy
   m_TagString: Enemy
@@ -108,7 +107,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -140,15 +139,3 @@ MonoBehaviour:
   enemySightRange: 0
   playerDetected: 0
   isChasing: 0
---- !u!114 &5891965425038719657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5891965425038719571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8579982ee6b5daa46ba33406d3c932e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

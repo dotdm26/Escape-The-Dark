@@ -12,31 +12,37 @@ public class DarkEnemyAIController : MonoBehaviour
     public float enemySightRange;
     public bool isChasing;
 
+    private Collider EnemyCollider;
+
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        player = GameObject.Find("Player").transform;
         isChasing = true;
+        EnemyCollider = gameObject.GetComponent<Collider>();
+        EnemyCollider.isTrigger = true;
     }
 
-    //dark enemy is considerably slower, but moves all the time.
+    //dark enemy moves all the time.
     //stops moving temporarily if you shine a light on it
     private void Update()
     {
-        if (isChasing == false)
+        if (isChasing == false) 
+            EnemyCollider.enabled = false;
+        else
         {
-            gameObject.GetComponent<Collider>().isTrigger = false;
+            EnemyCollider.enabled = true;
+            ChasePlayer();
         }
-        else ChasePlayer();
     }
 
     void ChasePlayer()
     {
-        gameObject.GetComponent<Collider>().isTrigger = true;
         agent.SetDestination(player.position);
         transform.LookAt(player);
     }
     
+    //below called by CameraRayControl
     void HitByLight()
     {
         Debug.Log("Dark enemy hit by light");
