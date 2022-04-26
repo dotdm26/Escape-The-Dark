@@ -1828,6 +1828,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5212862487909230693, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
+      propertyPath: GameFadeIO
+      value: 
+      objectReference: {fileID: 650352503}
+    - target: {fileID: -5212862487909230693, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: ScreenFadeInOut
       value: 
       objectReference: {fileID: 650352503}
@@ -1849,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.9
+      value: -32.4
       objectReference: {fileID: 0}
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4168,7 +4172,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: e1e8f4bb472bfb14484fd423a90e419a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ea7465a0476ef334a84637a0266c8f66, type: 2}
 --- !u!4 &815406937
 Transform:
   m_ObjectHideFlags: 0
@@ -7296,6 +7300,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8799041645908700264, guid: 3a213d6e9050f194aa69edd459dc2aef, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2107460473}
+    - target: {fileID: 8799041645908700264, guid: 3a213d6e9050f194aa69edd459dc2aef, type: 3}
+      propertyPath: whatIsPlayer.m_Bits
+      value: 2097152
+      objectReference: {fileID: 0}
     - target: {fileID: 8799041645908700271, guid: 3a213d6e9050f194aa69edd459dc2aef, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7627,7 +7639,7 @@ PrefabInstance:
     - target: {fileID: 4802095824210733292, guid: 82ebed807231f0e4db29d13526a36d1a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2107460473}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ebed807231f0e4db29d13526a36d1a, type: 3}
 --- !u!1 &1559482518
@@ -9436,6 +9448,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5891965425038719656, guid: efd63383b92e971408b484dedd98fda6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2107460473}
+    - target: {fileID: 5891965425038719656, guid: efd63383b92e971408b484dedd98fda6, type: 3}
+      propertyPath: whatIsPlayer.m_Bits
+      value: 2097152
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd63383b92e971408b484dedd98fda6, type: 3}
 --- !u!1 &1997442427
@@ -9628,6 +9648,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096875499}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2107460473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
+  m_PrefabInstance: {fileID: 290177654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111608876
 GameObject:
   m_ObjectHideFlags: 0

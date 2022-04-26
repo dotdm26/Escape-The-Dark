@@ -17,6 +17,7 @@ public class EnemyAIController : MonoBehaviour
     public bool playerDetected;
 
     private Collider EnemyCollider;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();

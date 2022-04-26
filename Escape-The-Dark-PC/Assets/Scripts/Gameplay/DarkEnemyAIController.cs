@@ -9,7 +9,6 @@ public class DarkEnemyAIController : MonoBehaviour
     public Transform player;
     public LayerMask whatIsPlayer;
 
-    public float enemySightRange;
     public bool isChasing;
 
     private Collider EnemyCollider;
@@ -27,12 +26,13 @@ public class DarkEnemyAIController : MonoBehaviour
     //stops moving temporarily if you shine a light on it
     private void Update()
     {
-        if (isChasing == false) 
-            EnemyCollider.enabled = false;
+        if (isChasing == true)
+        {
+            ChasePlayer();
+        }
         else
         {
-            EnemyCollider.enabled = true;
-            ChasePlayer();
+            agent.isStopped = true;
         }
     }
 
