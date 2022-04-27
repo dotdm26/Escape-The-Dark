@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * For playing footstep sounds when the player is moving.
+ */
+
 public class FootstepsController : MonoBehaviour
 {
     public AudioClip footsteps;

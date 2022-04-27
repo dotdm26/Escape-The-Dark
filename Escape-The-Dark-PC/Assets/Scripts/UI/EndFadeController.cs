@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class EndFadeController : MonoBehaviour
 {
     /*
-     * For Win & Lose scenes where the screen fades in/out
+     * For Win & Lose scenes, where you fade from white/black to the scene.
      */
+
     [SerializeField] private CanvasGroup White, Black;
     public bool StartGame, EndGame, WinState;
     
@@ -55,6 +56,7 @@ public class EndFadeController : MonoBehaviour
         }
     }
 
+    //Is called in GameConditionController
     void AfterGame(string SceneName)
     {
         SceneManager.LoadScene(SceneName);
