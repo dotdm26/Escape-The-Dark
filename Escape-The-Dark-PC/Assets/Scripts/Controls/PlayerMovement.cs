@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Simple player movement system.
+ * Included are walking, running, some head bobbing.
+ */
+
 public class PlayerMovement : MonoBehaviour
 {
     //Movement
@@ -80,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && z > 0 && isRunning == false)
         {
             isRunning = true;
-            speed = speed * 4 + 1f;
+            speed = speed * 3 + 1f;
         }
         else if (!Input.GetKey(KeyCode.LeftShift) || z > 0)
         {

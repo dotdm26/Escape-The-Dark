@@ -9,31 +9,28 @@ public class LightEnemyAIController : MonoBehaviour
     public Transform player;
     public LayerMask whatIsPlayer;
 
-    public float enemySightRange;
     public bool isChasing;
 
     private Collider EnemyCollider;
-    //need a 2nd collider, otherwise raycast won't work when it's not chasing
-    [SerializeField] private Collider SubCollider;
+    private float ogSpeed;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player").transform;
-        isChasing = true;
+        isChasing = false;
+        ogSpeed = agent.speed;
         EnemyCollider = gameObject.GetComponent<Collider>();
         EnemyCollider.isTrigger = true;
     }
 
+    //most dangerous enemy unit
     //light enemy doesn't move, but if you accidentally shine a light on it
-    //it will move VERY fast until you turn off your flashlight
+    //it will move VERY fast until you turn off your flashlight, where it stalks you at slow speed
     private void Update()
     {
-        if (isChasing == false) 
-            EnemyCollider.enabled = false;
-        else
+        if (isChasing == true)
         {
-            EnemyCollider.enabled = true;
             ChasePlayer();
         }
     }
@@ -44,16 +41,17 @@ public class LightEnemyAIController : MonoBehaviour
         transform.LookAt(player);
     }
 
+    //Is called by CameraRayController
     void HitByLight()
     {
         Debug.Log("Light enemy hit by light");
-        agent.isStopped = false;
+        agent.speed = ogSpeed;
         isChasing = true;
     }
 
     void NotHitByLight()
     {
-        agent.isStopped = true;
-        isChasing = false;
+        Debug.Log("Light enemy not hit by light");
+        agent.speed = ogSpeed / 4f;
     }
 }

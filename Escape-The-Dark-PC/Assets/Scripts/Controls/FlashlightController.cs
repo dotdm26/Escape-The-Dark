@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class FlashlightController : MonoBehaviour
 {
-    public GameObject on, off;
-    private bool isOn;
+    public GameObject off;
+    //used Light because we don't want to do on.SetActive(false).
+    //Otherwise the colliders will not work when you turn off the flashlight
+    public Light LightArea;
+    public bool isOn;
 
     void Start()
     {
-        on.SetActive(true);
         off.SetActive(false);
         isOn = true;
     }
@@ -21,12 +23,12 @@ public class FlashlightController : MonoBehaviour
         {
             if (isOn)
             {
-                on.SetActive(false);
+                LightArea.enabled = false;
                 off.SetActive(true);
             }
             else
             {
-                on.SetActive(true);
+                LightArea.enabled = true;
                 off.SetActive(false);
             }
             isOn = !isOn;

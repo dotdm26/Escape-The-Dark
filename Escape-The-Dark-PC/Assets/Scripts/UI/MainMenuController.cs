@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private CanvasGroup Buttons;
     [SerializeField] private CanvasGroup FadeOut;
 
+    //consider making the flashlight flicker randomly, for a scary feeling
     public FlashlightController Flashlight;
     private float Wait;
     private bool StartGame;
@@ -23,6 +24,7 @@ public class MainMenuController : MonoBehaviour
 
     private void Update()
     {
+        //slowly fades the Title then the buttons into the screen
         Wait += Time.deltaTime;
         if (MainMenu.alpha < 1 && Wait > 1f)
         {

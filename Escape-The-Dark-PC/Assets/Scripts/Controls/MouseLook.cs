@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ *Place this on the main camera (PC version at least)
+ */
+
 public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;

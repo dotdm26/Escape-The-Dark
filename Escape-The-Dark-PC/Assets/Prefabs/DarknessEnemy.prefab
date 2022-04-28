@@ -107,8 +107,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.5
-  m_Acceleration: 8
+  m_Speed: 2.5
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -131,10 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd1dc42ef6eddb40979d66814df5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 8799041645908700266}
   player: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
-  enemySightRange: 0
+    m_Bits: 2097152
   isChasing: 0

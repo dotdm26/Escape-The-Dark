@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameFadeController : MonoBehaviour
 {
     /*
-     *Start the game by fading into the game, fades out when game ends
+     *Start the game by fading from MainMenu into the game, 
+     *fades out when game ends
      */
     [SerializeField] private CanvasGroup White, Black;
     public bool StartGame, EndGame, WinState;
@@ -28,8 +29,7 @@ public class GameFadeController : MonoBehaviour
         EndGameCheck();
     }
 
-    //the .alpha is for increasing/decreasing the opacity of black/white
-
+    //When starting the game, fades from black screen to the scene
     void StartGameCheck()
     {
         if (StartGame == true)
@@ -39,6 +39,7 @@ public class GameFadeController : MonoBehaviour
         }
     }
 
+    //Fades to black/white depending on whether you lost/won
     void EndGameCheck()
     {
         if (EndGame == true)
