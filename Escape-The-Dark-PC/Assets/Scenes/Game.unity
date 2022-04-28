@@ -1828,6 +1828,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5212862487909230693, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
+      propertyPath: GameFadeIO
+      value: 
+      objectReference: {fileID: 650352503}
+    - target: {fileID: -5212862487909230693, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: ScreenFadeInOut
       value: 
       objectReference: {fileID: 650352503}
@@ -1841,7 +1845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.9
+      value: 11.8
       objectReference: {fileID: 0}
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1849,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.9
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1878,6 +1882,14 @@ PrefabInstance:
     - target: {fileID: 1824538247917191499, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824538249388333479, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824538249388333479, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e10e9fe9fc48214baffa5ca35b7522b, type: 3}
