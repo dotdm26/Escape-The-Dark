@@ -8966,7 +8966,7 @@ GameObject:
   - component: {fileID: 2138605780}
   - component: {fileID: 2138605781}
   m_Layer: 0
-  m_Name: Audio Control Manager
+  m_Name: AudioControlManagerTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
