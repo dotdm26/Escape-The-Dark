@@ -46,7 +46,7 @@ public class GameFadeController : MonoBehaviour
         {
             if (WinState == false)
             {
-                Black.alpha += Time.deltaTime / 2;
+                Black.alpha += Time.deltaTime / 3.25f;
                 if (Black.alpha == 1) AfterGame("Lose");
             }
             else

@@ -11,14 +11,11 @@ using UnityEngine;
 public class LightCollision : MonoBehaviour
 {
     public FlashlightController flashlight;
-    private MeshCollider meshcoll;
 
     void Start()
     {
+        //hide collision cone
         gameObject.GetComponent<Renderer>().enabled = false;
-        meshcoll = gameObject.GetComponent<MeshCollider>();
-        meshcoll.enabled = true;
-        //make cone-shaped object/collider invisible, but still active
     }
 
 
@@ -27,14 +24,16 @@ public class LightCollision : MonoBehaviour
     {
         if (flashlight.isOn) 
         {
-            if (other.gameObject.name == "FlashlightEnemy" || other.gameObject.name == "DarknessEnemy")
+            if (other.gameObject.name == "FlashlightEnemy" || other.gameObject.name == "FlashlightEnemy (1)" 
+                || other.gameObject.name == "DarknessEnemy" || other.gameObject.name == "DarknessEnemy (1)" )
             {
                 other.gameObject.SendMessage("HitByLight");
             }
         }
         else
         {
-            if (other.gameObject.name == "FlashlightEnemy" || other.gameObject.name == "DarknessEnemy")
+            if (other.gameObject.name == "FlashlightEnemy" || other.gameObject.name == "FlashlightEnemy (1)"
+                || other.gameObject.name == "DarknessEnemy" || other.gameObject.name == "DarknessEnemy (1)")
             {
                 other.gameObject.SendMessage("NotHitByLight");
             }
@@ -43,7 +42,6 @@ public class LightCollision : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit trigger");
         other.gameObject.SendMessage("NotHitByLight");
     }
 }
