@@ -44,14 +44,12 @@ public class LightEnemyAIController : MonoBehaviour
     //Is called by CameraRayController
     void HitByLight()
     {
-        Debug.Log("Light enemy hit by light");
         agent.speed = ogSpeed;
         isChasing = true;
     }
 
     void NotHitByLight()
     {
-        Debug.Log("Light enemy not hit by light");
-        agent.speed = ogSpeed / 4f;
+        agent.speed = ogSpeed / 3f;
     }
 }

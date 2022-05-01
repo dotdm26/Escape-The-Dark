@@ -45,7 +45,6 @@ public class DarkEnemyAIController : MonoBehaviour
     //below called by CameraRayControl
     void HitByLight()
     {
-        Debug.Log("Dark enemy hit by light");
         agent.isStopped = true;
         isChasing = false;
     }

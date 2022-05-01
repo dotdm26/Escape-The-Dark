@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Exit
+  - Flashlight
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - 
   - 
   - whatIsPlayer
-  - 
+  - whatIsEnemy
   - 
   - 
   - 
