@@ -711,11 +711,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159dc62758ec6a54ca23dab885286380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
   player: {fileID: 82629367}
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 6291456
+    m_Bits: 2097152
   enemySightRange: 10
   playerDetected: 0
 --- !u!65 &989409217

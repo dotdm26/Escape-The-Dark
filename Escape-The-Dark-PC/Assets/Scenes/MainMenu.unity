@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.26572725, g: 0.27143627, b: 0.25494534, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.26572707, g: 0.27143615, b: 0.25494504, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2635,6 +2635,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539719806}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &571280941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8378846891172732616, guid: 5f2b58032e3fa6c4ba3cd6ceee99d509, type: 3}
+  m_PrefabInstance: {fileID: 2081580457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ea0f5f72440cc4282e60bc3da18e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589629947
 GameObject:
   m_ObjectHideFlags: 0
@@ -7885,7 +7896,7 @@ MonoBehaviour:
   MainMenu: {fileID: 1886754342}
   Buttons: {fileID: 1793668773}
   FadeOut: {fileID: 1582241558}
-  Flashlight: {fileID: 0}
+  Flashlight: {fileID: 571280941}
 --- !u!1 &1895960877
 GameObject:
   m_ObjectHideFlags: 0
