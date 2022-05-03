@@ -47,12 +47,12 @@ public class GameFadeController : MonoBehaviour
             if (WinState == false)
             {
                 Black.alpha += Time.deltaTime / 3.25f;
-                if (Black.alpha == 1) AfterGame("Lose");
+                if (Black.alpha == 1) AfterGame("MainMenu");
             }
             else
             {
                 White.alpha += Time.deltaTime / 2;
-                if (White.alpha == 1) AfterGame("Win");
+                if (White.alpha == 1) AfterGame("Win 1");
             }
 
         }

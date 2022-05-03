@@ -33,10 +33,7 @@ public class GameConditionController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
-        {/*
-            source.Stop();
-            source.clip = JumpScare;
-            source.Play();*/
+        {
             Debug.Log("You lose");
             GameStatus.alpha = 1;
             _title.text = "Game Over";
@@ -51,8 +48,9 @@ public class GameConditionController : MonoBehaviour
             Debug.Log("You Win");
             GameStatus.alpha = 1;
             _title.text = "You have escaped the dark";
+            GameFadeIO.WinState = true;
         }
-       // GameFadeIO.EndGame = true;
+        GameFadeIO.EndGame = true;
     }
 
     private void Update()
@@ -70,18 +68,7 @@ public class GameConditionController : MonoBehaviour
             {
                 FadeOut.alpha += Time.deltaTime / 2;
             }
-            if (FadeOut.alpha == 1 && reset == true)
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-
-            if (FadeOut.alpha == 1 && stageTwo == true)
-            {
-                SceneManager.LoadScene("Win 1");
-            }
         }
-       
-
     }
 
     public void ResetGame()
