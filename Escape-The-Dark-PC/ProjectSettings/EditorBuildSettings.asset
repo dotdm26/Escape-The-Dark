@@ -8,16 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 36b33a6be5afd3b4dae5c16d05fe4480
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: dbb4e882fb001694cb0177e3cb8c74e5
-  - enabled: 1
-    path: Assets/Scenes/Lose.unity
-    guid: 97153d388316c854ca3c1eaab1bc14a8
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Win.unity
     guid: 188f08b073b24644da401df7b834fa3e
+  - enabled: 1
+    path: Assets/Scenes/Win 1.unity
+    guid: 7ce1f8b39dfa93c4791252f6cd693b62
   m_configObjects: {}

@@ -44,7 +44,7 @@ public class SwitchMusicTrigger : MonoBehaviour
         else
         {
             timer += Time.deltaTime;
-            if (timer > 10f && BGM.clip != NormalMusic)
+            if (timer > 9f && BGM.clip != NormalMusic)
                 ChangeBGM(NormalMusic);
         }
 

@@ -3,7 +3,14 @@ guid: 549bd66196da5fa4bbcf9c0e7afe6627
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - NormalMusic: {instanceID: 0}
+  - EnemyNearbyMusic: {instanceID: 0}
+  - RunningMusic: {instanceID: 0}
+  - LoseMusic: {instanceID: 0}
+  - GameFadeIO: {instanceID: 0}
+  - flashlight: {instanceID: 0}
+  - Player: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
