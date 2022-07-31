@@ -18,6 +18,11 @@ public class GameConditionController : MonoBehaviour
             GameFadeIO.WinState = true;
             StartCoroutine(PrepForRestart("Win"));
         }
+        else if (other.gameObject.CompareTag("Finish"))
+        {
+            GameFadeIO.WinState = true;
+            StartCoroutine(PrepForRestart("Game"));
+        }
         GameFadeIO.EndGame = true;
     }
 
